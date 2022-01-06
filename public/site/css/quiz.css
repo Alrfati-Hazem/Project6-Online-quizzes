@@ -1,0 +1,22 @@
+/* importing google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #fef4e8;
+}
+
+th,td{
+    padding: 15px !important;
+    text-align: center;
+    vertical-align:middle !important;
+}
+
+.form-check{
+    padding-left: 2.5em;
+}
