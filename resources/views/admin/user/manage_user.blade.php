@@ -36,12 +36,12 @@
                         @endif
                         <div class="row">
                             <form action="{{route("userFilter")}}" method="GET" class="d-flex mb-2" style="gap:20px">
-                              <select class="form-select" name="role" id="role">
+                              <select onchange="this.form.submit()" class="form-select" name="role" id="role">
                                     <option value="All Users" selected>All Users</option>
                                     <option value="user">Users</option>
                                     <option value="admin">Admins</option>
                                 </select>
-                                <button class="btn btn-primary" type="submit">Filter</button>
+                                {{-- <button class="btn btn-primary" type="submit">Filter</button> --}}
                             </form>
                             <a href="{{route("manage-user.create")}}" class="d-block mb-2 mr-0 ml-auto">
                                 <button class="au-btn au-btn-icon au-btn--green au-btn--small"><i class="zmdi zmdi-plus"></i>add user</button>
