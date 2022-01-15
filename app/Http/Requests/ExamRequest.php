@@ -31,7 +31,7 @@ class ExamRequest extends FormRequest
                     "name"        => "required | min:3",
                     "description" => "required",
                     "category_id" => "required",
-                    "image"       => ["mimes:jpg,png"]
+                    "image"       => ["mimes:jpg,png,svg"]
             ];
         }
     }

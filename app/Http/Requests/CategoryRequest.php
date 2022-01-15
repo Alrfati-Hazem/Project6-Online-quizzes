@@ -30,7 +30,7 @@ class CategoryRequest extends FormRequest
             return [
                     "name"        => "required | min:3",
                     "description" => "required",
-                    "image"       => ["mimes:jpg,png"],
+                    "image"       => ["mimes:jpg,png,svg"],
             ];
         }
     }

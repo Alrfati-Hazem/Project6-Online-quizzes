@@ -42,15 +42,9 @@ class LoginController extends Controller
     //     }
     // }
 
-      protected function authenticated(Request $request)
+      protected function authenticated(Request $request,$user)
     {
-            if(Auth::user() != null) {
-                if (Auth::user()->role_type == 'admin') {
-                    return redirect('/admin');
-                } else {
-                    return redirect(session()->get('url.intended'));
-                }
-            }
+        return $user->role_type == "admin" ? redirect('/admin') : redirect(session()->get('url.intended'));
     }
 
     public function showLoginForm() {

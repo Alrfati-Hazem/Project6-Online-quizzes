@@ -20,8 +20,10 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
-        return view("admin.user.manage_user",compact("users"));
+        $users          = User::all();
+        $role_selected  = "All Users";
+        $roles          = User::distinct('role_type')->get('role_type');
+        return view("admin.user.manage_user",compact("users",'role_selected','roles'));
     }
 
     /**
